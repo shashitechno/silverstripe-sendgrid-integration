@@ -24,7 +24,7 @@ class CustomMailer extends Mailer {
         function sendHTML($to, $from, $subject, $htmlContent, $attachedFiles = false, $customheaders = false, $plainContent = false, $inlineImages = false){
               $mail = new SendGrid\Mail($_ENV['SENDGRID_USERNAME'], $_ENV['SENDGRID_PASSWORD']);
               $sendgrid = $this->instanciate();
-              $mail->addTo($to)->addTo('shop@hedonism.co.uk')->setBcc('anthony@clickheremedia.co.uk')->setFrom($from)->setSubject($subject)->setHtml($htmlContent);
+              $mail->addTo($to)->setBcc('shahshikant@clickheremedia.co.uk')->setFrom($from)->setSubject($subject)->setHtml($htmlContent);
               $sendgrid->web->send($mail);                        // send mail via sendgrid web API
         }
 
@@ -33,7 +33,7 @@ class CustomMailer extends Mailer {
         function sendPlain($to, $from, $subject, $plainContent, $attachedFiles = false, $customheaders = false){
               $mail = new SendGrid\Mail($_ENV['SENDGRID_USERNAME'], $_ENV['SENDGRID_PASSWORD']);
               $sendgrid = $this->instanciate();
-              $mail->addTo($to)->addTo('shop@hedonism.co.uk')->setBcc('anthony@clickheremedia.co.uk')->setFrom($from)->setSubject($subject)->setText($plainContent);
+              $mail->addTo($to)->setBcc('shashikant@clickheremedia.co.uk')->setFrom($from)->setSubject($subject)->setText($plainContent);
               $sendgrid->web->send($mail);
         }
 

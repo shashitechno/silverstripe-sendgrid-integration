@@ -1,5 +1,5 @@
 <?php
 
-Email::set_mailer( new CustomMailer() );
+Email2::set_mailer( new CustomMailer() );
 
 ?>
