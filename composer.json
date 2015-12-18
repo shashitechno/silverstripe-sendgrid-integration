@@ -1,5 +1,5 @@
 {
-  "name": "tony13tv/sendgrid",
+  "name": "tony13tv/silverstripe-sendgrid",
   "description": "Sendgrid integration with Silverstripe Forked from sendgrid/sendgrid",
   "version": "1.0.0",
   "homepage": "http://github.com/sendgrid/sendgrid-php",
