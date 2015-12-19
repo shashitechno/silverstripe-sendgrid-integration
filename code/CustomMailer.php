@@ -36,6 +36,7 @@ class CustomMailer extends Mailer
         if($from_name) $from = preg_replace('/"*(.*)"*\<(.*)\>/i', '$2', $from);
         $mail->addTo($to)->setFromName($from_name)->setFrom($from)->setSubject($subject)->setHtml($htmlContent);
         $response = $sendgrid->web->send($mail);                        // send mail via sendgrid web API
+        SS_Log::log("$to | $from | $from_name | " . json_encode($response), SS_Log::INFO);
         if ($response->message == "error") return false;
         if ($response->message == "success") return true;
         return false;
@@ -52,6 +53,7 @@ class CustomMailer extends Mailer
         if($from_name) $from = preg_replace('/"*(.*)"*\<(.*)\>/i', '$2', $from);
         $mail->addTo($to)->setFromName($from_name)->setFrom($from)->setSubject($subject)->setText($plainContent);
         $response = $sendgrid->web->send($mail);
+        SS_Log::log("$to | $from | $from_name | " . json_encode($response), SS_Log::INFO);
         if ($response->message == "error") return false;
         if ($response->message == "success") return true;
         return false;
