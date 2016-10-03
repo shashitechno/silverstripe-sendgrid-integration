@@ -8,7 +8,7 @@
   "require": {
     "php": ">=5.3",
     "swiftmailer/swiftmailer": "~5.0.1",
-    "mashape/unirest-php": "dev-master"
+    "mashape/unirest-php": "^1.2.1"
   },
   "require-dev": {
     "phpunit/phpunit": "3.7.*",
