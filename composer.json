@@ -1,24 +1,18 @@
 {
-  "name": "sendgrid/sendgrid",
-  "description": "This library allows you to quickly and easily send emails through SendGrid using PHP.",
-  "version": "1.1.7",
+  "name": "tony13tv/silverstripe-sendgrid",
+  "description": "Sendgrid integration with Silverstripe Forked from sendgrid/sendgrid",
+  "version": "1.0.0",
   "homepage": "http://github.com/sendgrid/sendgrid-php",
   "license": "MIT",
-  "keywords": ["SendGrid", "sendgrid", "email", "send", "grid"],
+  "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "Silverstripe", "silverstripe", "SS3"],
   "require": {
     "php": ">=5.3",
     "swiftmailer/swiftmailer": "~5.0.1",
-    "mashape/unirest-php": "dev-master"
+    "mashape/unirest-php": "^1.2.1"
   },
   "require-dev": {
     "phpunit/phpunit": "3.7.*",
     "vlucas/phpdotenv": "1.0.2"
   },
-  "replace": {
-    "sendgrid/sendgrid-php": "*"
-  },
-  "type": "library",
-  "autoload": {
-    "psr-0": {"SendGrid": "lib/"}
-  }
+  "type": "silverstripe-module"
 }
